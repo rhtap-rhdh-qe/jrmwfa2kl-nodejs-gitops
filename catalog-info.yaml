@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: jrmwfa2kl-nodejs-gitops
+  description: This is GitOps manifest for jrmwfa2kl-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: jrmwfa2kl-nodejs
+    janus-idp.io/tekton: jrmwfa2kl-nodejs 
+    backstage.io/kubernetes-id: jrmwfa2kl-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:jrmwfa2kl-nodejs

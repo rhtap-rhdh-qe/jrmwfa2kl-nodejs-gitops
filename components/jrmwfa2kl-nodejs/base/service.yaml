@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: jrmwfa2kl-nodejs
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: jrmwfa2kl-nodejs 
+  name: jrmwfa2kl-nodejs
+spec:
+  ports:
+  - port: 3001 
+    targetPort: 3001 
+  selector:
+    app.kubernetes.io/instance: jrmwfa2kl-nodejs 
